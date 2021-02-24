@@ -20,6 +20,8 @@ import {RedirectionState} from '../features/redirection/redirection-state';
 import {SearchState} from '../features/search/search-state';
 import {SortCriteriaState} from '../features/sort-criteria/sort-criteria-state';
 import {FacetOrderState} from '../features/facets/facet-order/facet-order-state';
+import {StateWithHistory} from '../app/undoable';
+import {HistoryState} from '../features/history/history-state';
 
 export interface QuerySection {
   /**
@@ -196,4 +198,11 @@ export interface ProductRecommendationsSection {
    * The information related to the product recommendations endpoint.
    */
   productRecommendations: ProductRecommendationsState;
+}
+
+export interface HistorySection {
+  /**
+   * The state of the application at different points in time.
+   */
+  history: StateWithHistory<HistoryState>;
 }
