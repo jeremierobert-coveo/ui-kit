@@ -11,7 +11,8 @@ const entryPoint = apiPackage.entryPoints[0];
 
 const controllers: ControllerConfiguration[] = [
   {
-    initializer: 'buildPager',
+    initializer: 'buildFacet',
+    utils: ['buildNumericRange'],
     samplePaths: {
       react_class: [
         'packages/samples/headless-react/src/components/pager/pager.class.tsx',
@@ -42,6 +43,10 @@ const controllers: ControllerConfiguration[] = [
   },
   {
     initializer: 'buildFacetManager',
+    samplePaths: {},
+  },
+  {
+    initializer: 'buildHistory',
     samplePaths: {},
   },
 ];
